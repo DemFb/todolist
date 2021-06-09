@@ -89,6 +89,15 @@ function GetTodos(){
   }, []);
 
 
+  async function handleFilterType({filter, orderBy}) {
+    const variables = {
+      filter:{types:{}},
+      orderBy: {Ordering}
+    }
+    await data({variables})
+  }
+
+
   async function handleChangeDone({id, isDone}) {
     const variables = {
       id:id,
